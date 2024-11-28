@@ -2,7 +2,7 @@
 @model ForumMotor_13BC_H.Pages.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Categories";
 }
 
 <h1>Index</h1>
@@ -29,7 +29,7 @@
 @foreach (var item in Model.Category) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                    <a href="/TopicList?CategoryId=@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
